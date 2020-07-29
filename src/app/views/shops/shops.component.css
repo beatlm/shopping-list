@@ -1,0 +1,18 @@
+.form-field{
+    width: 200px;
+}
+
+.main-container {
+    align-self: center;
+  }
+  .mat-icon {
+    font-size: 15px;
+  }
+  .mat-fab{
+      width: 35px;
+      height: 35px;
+      padding: 0;
+  }
+  .center{
+      display:flex
+  }

@@ -1,0 +1,19 @@
+mat-form-field {
+    width: 100%;
+  }
+  
+  .login-button {
+    width: 100%;
+    margin: 1em 0 0 0 !important;
+    background: linear-gradient(#42a1ec, #0070c9);
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color:white;
+  }
+  
+  .register-button {
+    width: 100%;
+    margin: 1em 0 0 0 !important;
+    background: linear-gradient(#b3b2b2,#ffffff67);
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color:#474646b4;
+  }

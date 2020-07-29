@@ -1,0 +1,35 @@
+<div class="main-div">
+
+  <table mat-table [dataSource]="listado"
+    [ngStyle]="shop=='dia' ? {'background':'rgba(255,177,163,1)'} : shop=='carrefour' ? {'background':'rgba(183,222,237,1)'} : shop=='mercadona' ? {'background': 'rgba(206,235,210,1)'} : {'background-color':'white'}"
+    class="mat-elevation-z8 center background-shop">
+
+    <ng-container matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef> Producto </th>
+      <td mat-cell *matCellDef="let element"> {{element.product}}
+        <button mat-icon-button color="primary" (click)="delete(element.product)">
+          <mat-icon class="right_icon">highlight_off</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+
+    <!--  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (swiperight)="delete(product)"></tr>
+  </table>
+
+  <div class="btn">
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Nuevo producto" [formControl]="formProduct" />
+    </mat-form-field>
+    <button mat-icon-button color="primary" (click)="addProduct()">
+      <mat-icon aria-hidden="false">add</mat-icon>
+    </button>
+  </div>
+  <div class="btn">
+    <a mat-button routerLink="/shops">
+      <mat-icon>arrow_back_ios</mat-icon>Volver
+    </a>
+  </div>
+
+</div>
